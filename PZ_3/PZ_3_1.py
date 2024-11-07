@@ -3,16 +3,16 @@
 
 x, y = input("Введите первое число: "), input("Введите второе число: ")
 
-while type(x) != int: # обработка исключений
+while type(x) != float: # обработка исключений
   try:
-    x = int(x)
+    x = float(x)
   except ValueError:
     print("Неправильно ввели!")
     x = input("Введите первое число: ")
 
-while type(y) != int: # обработка исключений
+while type(y) != float: # обработка исключений
   try:
-    y = int(y)
+    y = float(y)
   except ValueError:
     print("Неправильно ввели!")
     y = input("Введите второе число: ")
