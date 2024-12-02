@@ -3,31 +3,31 @@
 # одновременно входным и выходным). С помощью этой функции поменять порядок
 # следования цифр на обратный для каждого из пяти данных целых чисел.
 
-def invert_digits(k):
-    if k < 0:
-        raise ValueError("Неправильно ввели! Число должно быть неотрицательным.")
-    inverted_k = 0
-    while k > 0:
-        digit = k % 10
-        inverted_k = inverted_k * 10 + digit
-        k //= 10
-    return inverted_k
+
+def InvertDigits(K):
+    k1 = 0
+    while K > 0:
+        digit = K % 10
+        K = K // 10
+        k1 = k1 * 10
+        k1 = k1 + digit
+    return k1
 
 
 i = 0
 while i < 5:
-    while True:
+    k = input("Введите положительное целое число: ")
+    while type(k) != int: # обработка исключений
         try:
-            a = input("Введите положительное целое число: ")
-            a = int(a)
-            if a < 0:
-                raise ValueError("Неправильно ввели! Число должно быть неотрицательным.")
-            break
+            k = int(k)
+            if k < 0:
+                print("Неправильно ввели! Введите целое неотрицательное число.")
+                k = input("Введите положительное целое число: ")
         except ValueError:
             print("Неправильно ввели! Введите целое неотрицательное число.")
+            k = input("Введите положительное целое число: ")
 
-
-    print(f"Инвертированное число: {invert_digits(a)}")
+    print(f"Инвертированное число: {InvertDigits(k)}")
     i += 1
 
 
