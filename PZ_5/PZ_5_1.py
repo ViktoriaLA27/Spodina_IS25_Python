@@ -21,3 +21,4 @@ while type(M) != int:  # обработка исключений
 
 
 stars(M)
+
