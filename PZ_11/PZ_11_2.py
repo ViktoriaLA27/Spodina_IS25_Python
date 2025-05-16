@@ -3,7 +3,7 @@
 # в стихотворной форме предварительно поставив последнюю строку фразой введенной
 # пользователем.
 
-f1 = open('text18-27.txt', encoding='utf-8')
+f1 = open('text18-27.txt', encoding='utf-16')
 l = f1.read()
 ab = l.count(" ")
 f1.close()
